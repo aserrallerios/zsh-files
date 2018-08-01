@@ -15,7 +15,7 @@ alias myip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 
 alias colorprint='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
 
 alias docker-rmi-none="docker rmi \`docker images | grep none | cut -f1 -d$'\t'\`"
-alias docker-rm-all="docker rm -f \`docker ps -a | awk '{print $1}' | tail -n +2\`"
+alias docker-rm-all="docker rm -f \`docker ps -a | awk '{print \$1}' | tail -n +2\`"
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
