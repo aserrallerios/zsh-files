@@ -1,6 +1,7 @@
 # Yes, really
-export PATH=$PATH:~/.bin
-export PATH=$PATH:~/.local/bin
+export PATH=~/bin:$PATH
+export PATH=~/.bin:$PATH
+export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/sbin:/usr/sbin
 
 # Setup terminal, and turn on colors
