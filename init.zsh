@@ -1,11 +1,7 @@
-SOURCE=${0%/*}
+#!/usr/bin/env zsh
 
-source $SOURCE/src/colors.zsh
-source $SOURCE/src/setopt.zsh
-source $SOURCE/src/exports.zsh
-source $SOURCE/src/completion.zsh
-source $SOURCE/src/zsh-aliases.zsh
-source $SOURCE/src/aliases.zsh
-source $SOURCE/src/bindkeys.zsh
-source $SOURCE/src/functions.zsh
-source $SOURCE/src/history.zsh
+SOURCE="$( cd "$(dirname "$0")" ; pwd -P )"
+
+for file in $SOURCE/src/**/*.zsh; do
+  source "$file"
+done
