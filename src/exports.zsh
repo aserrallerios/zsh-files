@@ -18,9 +18,11 @@ export ARCHFLAGS='-arch x86_64'
 export LESS='-rFnXM --ignore-case --raw-control-chars'
 # export PAGER='most'
 export PAGER='less'
-export EDITOR='vim'
+export EDITOR='nvim'
+# export VEDITOR='code'
+export VEDITOR='subl'
+
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 export LC_COLLATE=C
 
 export DRIP_SHUTDOWN=30
-export EDITOR=vim
