@@ -2,7 +2,7 @@
 export PATH=~/bin:$PATH
 export PATH=~/.bin:$PATH
 export PATH=~/.local/bin:$PATH
-export PATH=$PATH:/sbin:/usr/sbin
+export PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
