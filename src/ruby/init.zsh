@@ -8,4 +8,4 @@ if [ -e "/usr/share/chruby/chruby.sh" ]; then
 fi
 
 # Default to ruby other than the system ruby
-chruby `chruby | tr -d '* '`
+chruby `chruby | tr -d '* ' | sort -r`
