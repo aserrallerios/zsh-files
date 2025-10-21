@@ -1,6 +1,3 @@
-autoload -U compinit && compinit
-zmodload -i zsh/complist
-
 # ???
 zstyle ':completion:*' special-dirs true
 
