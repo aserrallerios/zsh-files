@@ -23,3 +23,5 @@ export VEDITOR='subl'
 export LC_COLLATE=C
 
 export DRIP_SHUTDOWN=30
+
+export WORDCHARS='*?_[]~=&;!#$%^(){}<>'
