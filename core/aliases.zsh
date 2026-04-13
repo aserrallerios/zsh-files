@@ -1,8 +1,6 @@
 # General aliases
 alias ll='ls -l'
 alias grep='grep --color=auto'
-alias rake='noglob rake'
-alias bower='noglob bower'
 
 # Rich output aliases
 alias psfull="ps auxfe"
