@@ -15,7 +15,8 @@ fi
 (( $+commands[sd] )) && alias sed='sd'
 (( $+commands[xh] )) && alias http='xh'
 (( $+commands[doggo] )) && alias dig='doggo'
-(( $+commands[btm] )) && alias top='btm'
+(( $+commands[btop] )) && alias top='btop'
+(( $+commands[difft] )) && alias diff='difft'
 
 # Override OMZ common-aliases fd (find-dirs) with real fd
 (( $+commands[fd] )) && unalias fd 2>/dev/null
