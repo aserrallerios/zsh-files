@@ -1,7 +1,13 @@
 #!/usr/bin/env zsh
 
-SOURCE="$( cd "$(dirname "$0")" ; pwd -P )"
+local base="${0:A:h}"
 
-for file in $SOURCE/src/**/*.zsh; do
-  source "$file"
+# Core — always load
+for f in "$base"/core/*.zsh; do
+  source "$f"
+done
+
+# Tools — conditionally loaded (each file guards itself)
+for f in "$base"/tools/*.zsh; do
+  source "$f"
 done

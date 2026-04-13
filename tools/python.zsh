@@ -1,0 +1,3 @@
+if (( $+commands[pip] )) || (( $+commands[pip3] )); then
+    alias pip-update-all="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
+fi

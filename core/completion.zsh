@@ -1,10 +1,4 @@
-# ???
 zstyle ':completion:*' special-dirs true
-
-# man zshcontrib
-#zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-#zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-#zstyle ':vcs_info:*' enable git #svn cvs
 
 # Enable completion caching, use rehash to clear
 zstyle ':completion::complete:*' use-cache on
@@ -27,9 +21,6 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 
-# insert all expansions for expand completer
-# zstyle ':completion:*:expand:*' tag-order all-expansions
-
 # match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -51,7 +42,6 @@ zstyle ':completion:*:scp:*' group-order files all-files users hosts-domain host
 zstyle ':completion:*:ssh:*' tag-order users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
 zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
-
 
 # ZAW styles
 zstyle ':filter-select:highlight' matched fg=yellow,standout
