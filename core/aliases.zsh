@@ -1,5 +1,20 @@
+# Modern CLI replacements (eza, bat, ripgrep, fd, lazygit)
+if (( $+commands[eza] )); then
+    alias ls='eza --icons --group-directories-first'
+    alias ll='eza -l --icons --group-directories-first --git'
+    alias la='eza -la --icons --group-directories-first --git'
+    alias tree='eza --tree --icons'
+else
+    alias ll='ls -l'
+fi
+
+(( $+commands[bat] )) && alias cat='bat'
+(( $+commands[lazygit] )) && alias lg='lazygit'
+
+# Override OMZ common-aliases fd (find-dirs) with real fd
+(( $+commands[fd] )) && unalias fd 2>/dev/null
+
 # General aliases
-alias ll='ls -l'
 alias grep='grep --color=auto'
 
 # Rich output aliases

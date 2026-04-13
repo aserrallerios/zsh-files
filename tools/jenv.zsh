@@ -1,5 +1,5 @@
-# Lazy-load jenv to avoid ~50ms penalty on every shell start
-if (( $+commands[jenv] )); then
+# jenv — only if mise is not handling Java
+if (( ! $+commands[mise] )) && (( $+commands[jenv] )); then
     jenv() {
         unfunction jenv
         eval "$(command jenv init -)"

@@ -1,4 +1,5 @@
+# Go — keep GOPATH/bin in PATH (mise or system go both need this)
 if (( $+commands[go] )); then
-    export GOPATH="$HOME/go"
-    export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
+    export GOPATH="${GOPATH:-$HOME/go}"
+    export PATH="$PATH:$GOPATH/bin"
 fi
