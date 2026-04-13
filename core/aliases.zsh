@@ -1,4 +1,4 @@
-# Modern CLI replacements (eza, bat, ripgrep, fd, lazygit)
+# Modern CLI replacements (eza, bat, ripgrep, fd, lazygit, dust, procs, sd, xh, doggo)
 if (( $+commands[eza] )); then
     alias ls='eza --icons --group-directories-first'
     alias ll='eza -l --icons --group-directories-first --git'
@@ -10,6 +10,12 @@ fi
 
 (( $+commands[bat] )) && alias cat='bat'
 (( $+commands[lazygit] )) && alias lg='lazygit'
+(( $+commands[dust] )) && alias du='dust'
+(( $+commands[procs] )) && alias ps='procs'
+(( $+commands[sd] )) && alias sed='sd'
+(( $+commands[xh] )) && alias http='xh'
+(( $+commands[doggo] )) && alias dig='doggo'
+(( $+commands[btm] )) && alias top='btm'
 
 # Override OMZ common-aliases fd (find-dirs) with real fd
 (( $+commands[fd] )) && unalias fd 2>/dev/null
