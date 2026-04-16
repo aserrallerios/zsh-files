@@ -14,3 +14,14 @@ export LC_COLLATE=C
 export DRIP_SHUTDOWN=30
 
 export WORDCHARS='*?_[]~=&;!#$%^(){}<>'
+
+# Cross-platform clipboard command
+if (( $+commands[pbcopy] )); then
+    export CLIPBOARD_COPY='pbcopy'
+elif (( $+commands[wl-copy] )); then
+    export CLIPBOARD_COPY='wl-copy'
+elif (( $+commands[xclip] )); then
+    export CLIPBOARD_COPY='xclip -selection clipboard'
+elif (( $+commands[xsel] )); then
+    export CLIPBOARD_COPY='xsel --clipboard --input'
+fi

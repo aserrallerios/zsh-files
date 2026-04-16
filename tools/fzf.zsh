@@ -34,7 +34,7 @@ if (( $+commands[fzf] )); then
     export FZF_CTRL_R_OPTS="
         --color header:italic
         --header 'Ctrl-Y to copy command'
-        --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+        --bind 'ctrl-y:execute-silent(echo -n {2..} | ${CLIPBOARD_COPY:-pbcopy})+abort'
     "
 
     # --- fzf-tab configuration ---

@@ -28,3 +28,19 @@ incognito() {
 mkcd() {
     mkdir -p "$1" && cd "$1"
 }
+
+# Cross-platform clipboard pipe: echo foo | clip
+clip() {
+    if [[ -z "$CLIPBOARD_COPY" ]]; then
+        echo "No clipboard tool found (pbcopy, wl-copy, xclip, xsel)" >&2
+        return 1
+    fi
+    eval "$CLIPBOARD_COPY"
+}
+
+# Browse aliases interactively with fzf
+aliases() {
+    alias | fzf --prompt='alias❯ ' \
+        --header 'Enter to copy to clipboard' \
+        --bind "enter:execute-silent(echo {} | sed \"s/=.*//\" | tr -d \"\\n\" | ${CLIPBOARD_COPY:-pbcopy})+abort"
+}
