@@ -44,3 +44,15 @@ aliases() {
         --header 'Enter to copy to clipboard' \
         --bind "enter:execute-silent(echo {} | sed \"s/=.*//\" | tr -d \"\\n\" | ${CLIPBOARD_COPY:-pbcopy})+abort"
 }
+
+function keybindings() {
+  local selected
+
+  # Fetch keybindings and pipe them to fzf
+  selected=$(bindkey | fzf --prompt="Keybindings> " --height=50% --layout=reverse)
+
+  # If the user made a selection (didn't press ESC), place it in the prompt
+  if [[ -n "$selected" ]]; then
+    print -z "bindkey $selected"
+  fi
+}
