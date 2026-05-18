@@ -36,7 +36,7 @@ alias colorprint='for code ({000..255}) print -P -- "$code: %F{$code}This is how
 
 # Global aliases
 alias -g G=' | grep'
-alias -g GI=' | grep -i  '
+alias -g GI=' | grep -i'
 alias -g L=' | less'
 alias -g T=' | tail -20'
 alias -g NUL=' > /dev/null 2>&1'
